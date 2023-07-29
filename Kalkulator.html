@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function calculateHypotenuse() {
+      var a = parseFloat(document.getElementById("sideA").value);
+      var b = parseFloat(document.getElementById("sideB").value);
+
+      var hypotenuse = Math.sqrt(a**2 + b**2);
+
+      document.getElementById("result").innerHTML = "Panjang sisi miring (hipotenusa): " + hypotenuse;
+    }
+  </script>
+</head>
+<body>
+  <h2>Kalkulator Pythagoras</h2>
+
+  <label for="sideA">Panjang Sisi A:</label>
+  <input type="number" id="sideA" name="sideA" step="0.01"><br><br>
+
+  <label for="sideB">Panjang Sisi B:</label>
+  <input type="number" id="sideB" name="sideB" step="0.01"><br><br>
+
+  <button onclick="calculateHypotenuse()">Hitung</button>
+
+  <p id="result"></p>
+</body>
+</html>
